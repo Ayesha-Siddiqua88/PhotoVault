@@ -33,20 +33,20 @@ export default function Signup() {
                 <div className="card-body">
                     <div className="form-control">
                         <label className="label">
-                            <span className="label-text">Email</span>
+                            <span className="label-text text-white">Email</span>
                         </label>
-                        <input type="email" value={email} onChange={(e)=>setEmail(e.target.value)} placeholder="email" className="input input-bordered" required />
+                        <input type="email" value={email} onChange={(e)=>setEmail(e.target.value)} placeholder="email" className="input input-bordered input-style" required />
                     </div>
 
                     <div className="form-control">
                         <label className="label">
-                            <span className="label-text">Password</span>
+                            <span className="label-text text-white">Password</span>
                         </label>
-                        <input type="password" value={password} onChange={(e)=>setPassword(e.target.value)} placeholder="password" className="input input-bordered" required />
+                        <input type="password" value={password} onChange={(e)=>setPassword(e.target.value)} placeholder="password" className="input input-bordered input-style" required />
                     </div>
 
                     <div className="form-control mt-6">
-                        <button className="btn btn-primary btn-gradient">SignUp</button>
+                        <button className="btn btn-primary btn-gradient text-white">SIGN UP</button>
                     </div>
 
                 </div>

@@ -55,8 +55,8 @@ const Analytics = () => {
   }
 
   return (
-    <div className="mt-10 ml-10 mb-[3rem]">
-      <h2 className="text-2xl font-bold mb-6 text-blue-500 text-center">Analytics</h2>
+    <div className="ml-10 mb-[3rem] analyse">
+      <h2 className="text-2xl font-bold pt-8 text-blue-500 text-center ">Analytics</h2>
       {images.length > 0 ? (
         <div className="grid md:grid-cols-5 justify-center gap-8 mt-6">
           {images.map((image) => (

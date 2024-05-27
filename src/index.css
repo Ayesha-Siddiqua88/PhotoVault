@@ -5,6 +5,21 @@
 /* src/components/Signup.css */
 #root{
   background-color: #1d232a;
+  height: 100%;
+}
+.analyse{
+  background-color: #1d232a;
+  min-height: 100vh;
+}
+.input-style{
+  background-color: #1d232a;
+  color: white;
+  border: 2px solid #0576e635;
+}
+.input-style:focus{
+  background-color: #1d232a;
+  color: white;
+  border: 2px solid #00f26148;
 }
 @keyframes gradient-border {
     0% {

@@ -1,4 +1,4 @@
-import { Routes, Route } from "react-router-dom"
+import { Routes, Route, useLocation } from "react-router-dom"
 import Home from "./pages/Home" 
 import Signup from "./pages/Signup"
 import {AuthProvider} from "./context/auth"
@@ -10,6 +10,7 @@ import Footer from "./components/Footer"
 
 function App() {
 
+  const location = useLocation();
   return (
     <AuthProvider>
     <div>
