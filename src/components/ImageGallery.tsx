@@ -4,21 +4,18 @@ import { useState } from "react";
 
 const ImageGallery=()=> {
   const { docs: images, isLoading} = useFirestore('images');
-  const [sharedLink, setSharedLink] = useState("");
   const [showToast, setShowToast] = useState(false); // State to manage toast visibility
 
 
   const handleShare = async (imageUrl: string, userEmail: string) => {
     const shareLink = `${window.location.origin}/view?image=${encodeURIComponent(imageUrl)}&user=${encodeURIComponent(userEmail)}`;
-    setSharedLink(shareLink);
     navigator.clipboard.writeText(shareLink).then(() => {
-      setShowToast(true); // Show toast when link is copied
+      setShowToast(true); 
       setTimeout(() => {
-        setShowToast(false); // Hide toast after 2 seconds
+        setShowToast(false); 
       }, 2000);
     });
 
-    // Track sharing event in Google Analytics
     const analytics = getAnalytics();
     logEvent(analytics, 'share', { imageUrl, userEmail });
   };
@@ -51,7 +48,7 @@ const ImageGallery=()=> {
           </div>
         )
       )}
-      {showToast && ( // Render toast if showToast is true
+      {showToast && (
         <div className="toast">
           <div className="alert alert-info">
             <span>Link copied to clipboard.</span>
